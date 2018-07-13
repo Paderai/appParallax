@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sciences Connexions - page principale</title>
+
+  <!-- Balises meta pour métadonnées de la page-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page web de Sciences Connexions - Sciences Connections web page">
+  <meta name="keywords" content="Technohumanisme,sciences, connections,connexions,transformation numérique, digital transformation">
+  <meta name="author" content="François Provencher">
+  <meta name="language" content="Français">
+
+  <!-- Chargement des liens externes -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet">
+  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Début de l'application -->
+ <div id="app">
+   <v-app light>  <!-- Permet de choisir entre le fond blanc et noir -->
+
+    <!-- Navigation Drawer sur le cote gauche de l'app - bug
+
+    <v-navigation-drawer>
+      <-toolbar flat>
+        <v-list>
+          <v-list-tile>
+            <v-list-tile-title class = "title">
+              Application
+            </v-list-tile-title>
+          </v-list-tile>
+        </v-list>
+      </v-toolbar>
+
+      <v-divider></v-divider>
+
+      <v-list dense class="pt-0">
+        <v-list-tile>
+            v-for="item in items"
+            :key="item.title"
+            @click=""
+        >
+          <v-list-tile-action>
+            <v-icon> {{ item.icon }}</v-icon>
+          <v-list-tile-action>
+
+          <v-list-tile-content>
+            <v-list-tile-title> {{ item.title}} </v-list-tile-title>
+          </v-list-tile-content>
+
+        <v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+
+-->
+
+
+
+    <!-- Toolbar en haut de la page -->
+    <v-toolbar class="white">
+      <v-toolbar-side-icon></v-toolbar-side-icon>
+      <img src="assets/logosc.png" alt="Logo Sciences" height="50">
+      <v-toolbar-title v-text="title"></v-toolbar-title
+        <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
+        <v-toolbar-items >
+          <v-icon @click="home">home</v-icon>
+          <v-btn flat>Link One</v-btn>
+          <v-btn flat>Link Two</v-btn>
+          <v-btn flat>Link Three</v-btn>
+        </v-toolbar-items>
+    </v-toolbar>
+
+
+    <v-content>
+
+      <!-- Section 1 - En-tête -->
+      <section>
+        <v-parallax src="assets/boules.jpg" height="600">
+          <v-layout
+            column
+            align-center
+            justify-center
+            class="white--text"
+          >
+
+            <h1 class="white--text mb-2 display-1 text-xs-center">Sciences Connexions</h1>
+<!--
+            <div class="subheading mb-3 text-xs-center">Site consacré aux connexions entre les sciences, les technologies et l'humain</div>
+-->
+            <!-- Bouton-->
+            <v-btn
+              class="blue lighten-2 mt-5"
+              dark
+              large
+              href="/pre-made-themes"
+            >
+              Bouton (fonction à définir)
+            </v-btn>
+
+          </v-layout>
+        </v-parallax>
+      </section>
+
+      <!-- Section 1 - But du site -->
+      <section>
+        <v-layout
+          column
+          wrap
+          class="my-5"
+          align-center
+        >
+          <v-flex xs12 sm4 class="my-3">
+            <div class="text-xs-center">
+              <h2 class="headline">Site consacré au technohumanisme et aux connexions entre l'humain, les sciences et les technologies</h2>
+              <!-- Subheading caché
+              <span class="subheading">
+                Technohumanisme
+              </span>
+              -->
+            </div>
+          </v-flex>
+
+          <v-flex xs12>
+            <v-container grid-list-xl>
+              <v-layout row wrap align-center>
+                <v-flex xs12 md4>
+                  <v-card class="elevation-0 transparent">
+                    <v-card-text class="text-xs-center">
+                      <v-icon x-large class="blue--text text--lighten-2">public</v-icon>
+                    </v-card-text>
+                    <v-card-title primary-title class="layout justify-center">
+                      <div class="headline text-xs-center">Pourquoi ce site</div>
+                    </v-card-title>
+                    <v-card-text>
+                      L’objectif premier de Sciences Connexions est de faire ressortir les connexions entre
+                      les différentes sciences et technologies afin de proposer une explication moderne et
+                      originale du monde dans lequel nous vivons. 
+                      <br>
+                      <br>
+                      Le 20e siècle a vu une avancée incomparable des sciences et des technologies.
+                      En contrepartie, notre monde est devenu de plus en plus complexe et difficile à comprendre.
+                      Au fil des ans, les différentes disciplines se sont développées et surspécialisées pour devenir
+                      hermétiques aux non-initiés.
+                      <br>
+                      <br>
+                      Dans la Grèce antique, la philosophie (ou l’amour de la sagesse) portait sur l’ensemble du savoir
+                      et essayait à la fois d’expliquer le monde et l’homme.  À la renaissance, un humanisme comme
+                      Jean Pic de la Mirandole pouvait se vanter de connaître tout le savoir qui existe.
+                      <br>
+                      <br>
+                      Aujourd’hui, ce n’est évidemment plus possible.
+                      Malgré le foisonnement de l’information disponible sur Internet, il est de plus en plus difficile pour un
+                      être humain d’acquérir une compréhension globale du monde.
+                      Les universitaires sont cloisonnés dans leur discipline respective. Même les ouvrages de vulgarisation scientifique
+                      ne couvrent, la plupart du temps, qu'une seule discipline.
+                      <br>
+                      <br>
+                      N’étant ni philosophe, ni physicien, ni historien, ni anthropologue, ni astronome,
+                      seulement très curieux, je n’ai pas à observer les barrières interdisciplinaires qui
+                      font qu’aujourd’hui, les sciences progressent en silo.
+                      <br>
+                      <br>
+                      Le prix à payer est peut-être
+                      dans certains cas, une trop grande approximation ou même des erreurs, mais le jeu en
+                      vaut la chandelle parce qu’il permet de faire des connexions entre différentes disciplines
+                      scientifiques afin de mieux expliquer le monde dans lequel on vit. 
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
+                <v-flex xs12 md4>
+                  <v-card class="elevation-0 transparent">
+                    <v-card-text class="text-xs-center">
+                      <v-icon x-large class="blue--text text--lighten-2">nature_people</v-icon>
+                    </v-card-text>
+                    <v-card-title primary-title class="layout justify-center">
+                      <div class="headline">Le technohumanisme</div>
+                    </v-card-title>
+                    <v-card-text>
+                      À 6 ans, je voulais être ingénieur en aéronautique. En 1994, j’ai terminé mon
+                      baccalauréat en génie mécanique. Mon premier emploi consistait à mettre en place un
+                      programme de recherche et développement dans une PME.
+                      <br>
+                      <br>
+                      Je me suis rapidement rendu compte que le problème dans les organisations n’était pas la technologie en soi, mais la manière dont elle était gérée. Quelques mois après, je commençais ma maîtrise en management de la technologie.
+                      Depuis ce temps, je me suis consacré à aider les entreprises manufacturières à mieux utiliser la technologie.
+                      <br>
+                      <br>
+                      Près de 25 ans plus tard, c’est toujours cette passion qui m’anime.
+                      L’industrie est en pleine transformation numérique ce qui rend le
+                      management de la technologie plus important que jamais.
+                      <br>
+                      <br>
+                      C’est au fil de mes observations et de mes lectures dans un grand nombre de
+                      domaines comme la physique, l’histoire et l’anthropologie que j’ai développé ce que j’appelle
+                      l’approche technohumaniste.
+                      Par souci de concision, je ne vais pas m’attarder à décrire cette approche ici.
+                      <br>
+                      <br>
+                      Disons simplement que la particularité de l’homme est d’être un animal technologique. C
+                      omme plusieurs autres primates, l’homme est un animal social.
+                      Par contre, nous sommes la seule espèce incapable de survivre dans la nature sans la modifier
+                      (au minimum par la maîtrise du feu et la taille de pierres). 
+                      L’homme est une espèce animale biologiquement conçue pour être un chasseur-cueilleur,
+                      mais qui doit sans cesse s’adapter à un environnement qu’il transforme lui-même beaucoup
+                      plus rapidement par la technologie que ne le permet l’évolution.
+                      <br>
+                      <br>
+                      Au-delà des buzzwords que l’on entend à tous les jours (Industrie 4.0, intelligence artificielle, réalité augmentée, etc.), nous vivons dans une période exceptionnelle. Nous sommes actuellement dans la transition entre l’ère industrielle et l’ère numérique.
+                      Pour moi, l’histoire de l’humanité comprend quatre ères :
+
+                      L’ère préagricole
+                      L’ère agricole
+                      L’ère industrielle
+                      L’ère numérique
+                      Les impacts de cette transition se font maintenant sentir dans tous les secteurs de la société.
+
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
+                <v-flex xs12 md4>
+                  <v-card class="elevation-0 transparent">
+                    <v-card-text class="text-xs-center">
+                      <v-icon x-large class="blue--text text--lighten-2">blur_linear</v-icon>
+                    </v-card-text>
+                    <v-card-title primary-title class="layout justify-center">
+                      <div class="headline text-xs-center">Des visualisations innovantes</div>
+                    </v-card-title>
+                    <v-card-text>
+
+                    Afin de mieux présenter les relations entre les éléments de différentes disciplines,
+                    je compte utiliser des visualisations innovantes basées sur 3D.js et vis.js.
+                    <br>
+                    <br>
+                    1) Visualisation de type réseau
+                    <br>
+                    2) Visualisation de type timeline
+
+
+                    </v-card-text>
+                  </v-card>
+                </v-flex>
+              </v-layout>
+            </v-container>
+          </v-flex>
+        </v-layout>
+      </section>
+
+      <section>
+        <v-parallax src="assets/artificial-intelligence-3382507_640.jpg" height="426">
+          <v-layout column align-center justify-center>
+            <div class="headline white--text mb-3 text-xs-center">Dans un monde numérique ou tout va très vite, lire, écrire et réfléchir est devenu un avantage compétitif</div>
+
+            <!-- <em>Kick-start your application today</em> -->
+            <v-btn
+              class="blue lighten-2 mt-5"
+              dark
+              large
+              href="/pre-made-themes"
+            >
+              Lien vers les articles (en construction)
+            </v-btn>
+          </v-layout>
+        </v-parallax>
+      </section>
+
+      <section>
+        <v-container grid-list-xl>
+          <v-layout row wrap justify-center class="my-5">
+            <v-flex xs12 sm4>
+              <v-card class="elevation-0 transparent">
+                <v-card-title primary-title class="layout justify-center">
+                  <div class="headline">À propos</div>
+                </v-card-title>
+                <v-card-text>
+                  La première version de ce site a été conçue à l'aide de WordPress.
+                  Cette version a été créée à l'aide de Vue.js et Viewtify en
+                  utilisant le gabarit parallax de Costa Huang.
+                  <br>
+                  <br>
+                  Ce site est encore en construction:
+                  Prochaines choses à faire:
+                  <br>
+                  1) définir et mettre le bon texte
+                  <br>
+                  2) Changer les images
+                  <br>
+                  3) Réutiliser le template pour créer la page de réseau
+                  <br>
+                  4) Regarder les autres composantes
+                  <br>
+                  5) Uploader dans github
+                  <br>
+                  6) Tester sur le site Web
+                </v-card-text>
+              </v-card>
+            </v-flex>
+            <!-- Information pour nous contacter -->
+            <v-flex xs12 sm4 offset-sm1>
+              <v-card class="elevation-0 transparent">
+                <v-card-title primary-title class="layout justify-center">
+                  <div class="headline">Pour me contacter</div>
+                </v-card-title>
+
+                <!--
+                <v-card-text>
+                  Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare.
+                </v-card-text>
+                <v-list class="transparent">
+                  <v-list-tile>
+                    <v-list-tile-action>
+                      <v-icon class="blue--text text--lighten-2">phone</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                      <v-list-tile-title>450-464-8008</v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                  <v-list-tile>
+                    <v-list-tile-action>
+                      <v-icon class="blue--text text--lighten-2">place</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                      <v-list-tile-title>Montréal, Canada</v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                -->
+                  <v-list-tile>
+                    <v-list-tile-action>
+                      <v-icon class="blue--text text--lighten-2">email</v-icon>
+                    </v-list-tile-action>
+                    <v-list-tile-content>
+                      <v-list-tile-title>
+                        <a href="francois.provencher@sciencesconnexions.com">francois.provencher@sciencesconnexions.com</a>
+                      </v-list-tile-title>
+                    </v-list-tile-content>
+                  </v-list-tile>
+                </v-list>
+              </v-card>
+            </v-flex>
+
+          </v-layout>
+        </v-container>
+      </section>
+
+      <!-- Pied de page -->
+      <v-footer class="blue darken-2">
+        <v-layout row wrap align-center>
+          <v-flex xs12>
+            <div class="white--text ml-3">
+              Copyright 2018, François Provencher
+            </div>
+          </v-flex>
+        </v-layout>
+      </v-footer>
+
+
+    </v-content>
+  </v-app>
+ </div>
+
+
+<!-- Debut des scripts - pourrait etre mis dans un autre fichier -->
+
+ <script src="https://unpkg.com/vue/dist/vue.js"></script>
+ <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+
+
+
+
+
+
+
+<!-- Creation de la Vue -->
+ <script>
+   new Vue({
+    el: '#app',
+    data () {
+      return {
+        title: 'Sciences Connexions'
+
+
+    //    items: [
+    //            {title: 'Home', icon: 'email'},
+    //            {title: 'About', icon: 'question_answer'}
+    //          ],
+    //          right: null
+              }
+            }
+
+  
+
+          })
+ </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1> reseaux.html</h1>
+
+    <div id="app"
+
+         <!-- Toolbar en haut de la page -->
+         <v-toolbar class="white">
+            <v-toolbar-side-icon></v-toolbar-side-icon>
+            <img src="assets/logosc.png" alt="Logo Sciences" height="50">
+            <v-toolbar-title v-text="title"></v-toolbar-title <v-spacer></v-spacer>
+            <v-spacer></v-spacer>
+            <v-toolbar-items>
+                <v-icon @click="home">home</v-icon>
+                <v-btn flat> {{ auteur }}</v-btn>
+                <v-btn flat href="reseaux.html">Réseaux</v-btn>
+                <v-btn flat @click="timelines">Timelines</v-btn>
+            </v-toolbar-items>
+        </v-toolbar>
+
+      </div>
+  </body>
+</html>
